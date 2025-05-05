@@ -12,10 +12,10 @@
     }
 
     const preloadedSounds = {
-        success: new Audio("sounds/success.wav"),
-        error: new Audio("sounds/error.wav"),
-        warning: new Audio("sounds/error.wav"),
-        info: new Audio("sounds/success.wav"),
+        success: new Audio("/sounds/success.wav"),
+        error: new Audio("/sounds/error.wav"),
+        warning: new Audio("/sounds/error.wav"),
+        info: new Audio("/sounds/success.wav"),
       };
       
       // Preload the audio files

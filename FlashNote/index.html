@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="notify.css">
+    <script src="notify.js"></script>       
+</head>
+<body>
+    <div>
+        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, praesentium?</h1>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo molestiae, libero blanditiis aperiam ab voluptates quisquam nostrum veniam, nam voluptatibus atque suscipit tempore. Laboriosam quam, nulla dolorem reprehenderit cupiditate repellendus?</div>
+
+        <h3>Notification Positions</h3>
+        <button onclick="flash.error('Top Left Alert',)">Top Left</button>
+        <button onclick="flash.success('Top Center Alert','top-left')">Top Center</button>
+        <button onclick="flash.info('Top Right Alert', 'top-right', 1000)">Top Right</button>
+        <br><br>
+        <button onclick="flash.warning('Bottom Left Alert','bottom-left', 3000, true)">Bottom Left</button>
+        <button onclick="flash.error('Bottom Center Alert', 'bottom-center')">Bottom Center</button>
+        <button onclick="flash.success('Bottom Right Alert','bottom-right')">Bottom Right</button>
+
+    </div>
+</body>
+</html>

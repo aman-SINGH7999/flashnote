@@ -1,26 +1,123 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flash Notification Documentation</title>
     <link rel="stylesheet" href="notify.css">
-    <script src="notify.js"></script>       
+    <script src="notify.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f9f9f9;
+            color: #333;
+        }
+        .page{
+            max-width: 800px;
+            width: 100%;
+            margin: 0 auto;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 28px;
+        }
+        section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #e67e22;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        code {
+            background: #ecf0f1;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .btn {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <div>
-        <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, praesentium?</h1>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo molestiae, libero blanditiis aperiam ab voluptates quisquam nostrum veniam, nam voluptatibus atque suscipit tempore. Laboriosam quam, nulla dolorem reprehenderit cupiditate repellendus?</div>
+    <div class="page">
+        <header>
+            <h1>Flash Notification Documentation</h1>
+        </header>
 
-        <h3>Notification Positions</h3>
-        <button onclick="flash.error('Top Left Alert',)">Top Left</button>
-        <button onclick="flash.success('Top Center Alert','top-left')">Top Center</button>
-        <button onclick="flash.info('Top Right Alert', 'top-right', 1000)">Top Right</button>
-        <br><br>
-        <button onclick="flash.warning('Bottom Left Alert','bottom-left', 3000, true)">Bottom Left</button>
-        <button onclick="flash.error('Bottom Center Alert', 'bottom-center')">Bottom Center</button>
-        <button onclick="flash.success('Bottom Right Alert','bottom-right')">Bottom Right</button>
+        <section>
+            <h2>1️⃣ Include CSS and JS</h2>
+            <p>To use the flash notifications, add the following lines inside the <code>&lt;head&gt;</code> tag of your HTML:</p>
+            <pre><code>&lt;link rel="stylesheet" href="notify.css"&gt;
+ &lt;script src="notify.js"&gt;&lt;/script&gt;</code></pre>
+        </section>
 
+        <section>
+            <h2>2️⃣ Usage</h2>
+            <p>Use the <code>flash</code> object to show different types of notifications:</p>
+            <pre><code>flash.error(message, position, duration, closeButton);
+ flash.success(message, position, duration, closeButton);
+ flash.info(message, position, duration, closeButton);
+ flash.warning(message, position, duration, closeButton);</code></pre>
+        </section>
+
+        <section>
+            <h2>3️⃣ Parameters</h2>
+            <ul>
+                <li><strong>message</strong> (required): Text you want to display.</li>
+                <li><strong>position</strong> (optional): 'top-left', 'top-center', 'top-right', 'bottom-left', 'bottom-center', 'bottom-right' (default: 'top-right').</li>
+                <li><strong>duration</strong> (optional): Time in milliseconds before auto-close (default: 3000ms).</li>
+                <li><strong>closeButton</strong> (optional): true or false (default: false) to show/hide close button.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4️⃣ Example Usage</h2>
+            <p><strong>Top Left Error:</strong></p>
+            <pre><code>flash.error('Something went wrong!', 'top-left');</code></pre>
+            <p><strong>Top Center Success with Close Button:</strong></p>
+            <pre><code>flash.success('Operation Successful!', 'top-center', 5000, true);</code></pre>
+            <p><strong>Bottom Right Info with Custom Duration:</strong></p>
+            <pre><code>flash.info('This is an info message', 'bottom-right', 1000);</code></pre>
+        </section>
+
+        <section>
+            <h2>5️⃣ Try It Yourself!</h2>
+            <button class="btn" onclick="flash.error('Top Left Alert', 'top-left')">Show Top Left Error</button>
+            <button class="btn" onclick="flash.success('Top Center Alert', 'top-center')">Show Top Center Success</button>
+            <button class="btn" onclick="flash.info('Bottom Right Alert', 'bottom-right')">Show Bottom Right Info</button>
+        </section>
     </div>
 </body>
 </html>
+
+

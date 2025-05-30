@@ -84,10 +84,16 @@
         <section>
             <h2>2️⃣ Usage</h2>
             <p>Use the <code>flash</code> object to show different types of notifications:</p>
-            <pre><code>flash.error(message, position, duration, closeButton);
- flash.success(message, position, duration, closeButton);
- flash.info(message, position, duration, closeButton);
- flash.warning(message, position, duration, closeButton);</code></pre>
+            <ul>
+                <li><code>flash.error(message, position, duration, closeButton);</code></li>
+                <li><code>flash.success(message, position, duration, closeButton);</code></li>
+                <li><code>flash.info(message, position, duration, closeButton);</code></li>
+                <li><code>flash.warning(message, position, duration, closeButton);</code></li>
+            </ul>
+            
+            
+            
+            
         </section>
 
         <section>
@@ -103,11 +109,11 @@
         <section>
             <h2>4️⃣ Example Usage</h2>
             <p><strong>Top Left Error:</strong></p>
-            <pre><code>flash.error('Something went wrong!', 'top-left');</code></pre>
+            <code>flash.error('Something went wrong!', 'top-left');</code>
             <p><strong>Top Center Success with Close Button:</strong></p>
-            <pre><code>flash.success('Operation Successful!', 'top-center', 5000, true);</code></pre>
+            <code>flash.success('Operation Successful!', 'top-center', 5000, true);</code>
             <p><strong>Bottom Right Info with Custom Duration:</strong></p>
-            <pre><code>flash.info('This is an info message', 'bottom-right', 1000);</code></pre>
+            <code>flash.info('This is an info message', 'bottom-right', 1000);</code>
         </section>
 
         <section>
